@@ -1,0 +1,27 @@
+{
+    "name": "org.Shadow-Grove.LoginWithDiscord.Examples",
+    "rootNamespace": "ShadowGroveGames.LoginWithDiscord.Examples",
+    "references": [
+        "GUID:9f824de62267a5a49b2f2344d20fafa4"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS",
+        "LinuxStandalone64",
+        "CloudRendering",
+        "macOSStandalone",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

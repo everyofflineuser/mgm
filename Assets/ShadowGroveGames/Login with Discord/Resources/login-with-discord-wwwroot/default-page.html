@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="referrer" content="no-referrer">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: #313338;
+            }
+            
+            .boxWrapper {
+                max-width: 1480px;
+                position: relative;
+                width: 100vw;
+                min-height: 100vh;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+            
+            .box {
+                background-color: #18191c;    
+                width: 400px;
+                min-height: 400px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                position: relative;
+                border-radius: 5px;
+                -webkit-box-shadow: rgb(0 0 0 / 30%) 10px 10px;
+                box-shadow: rgb(0 0 0 / 30%) 10px 10px;
+                background-color: #18191c;
+                color: #dcddde;
+                padding: 0 25px;
+                text-align: center;
+                font-family: sans-serif;
+            }
+            
+            .box .circle-mark {
+                background-image: url(/circle-mark.png);
+                display: block;
+                width: 95px;
+                height: 95px;
+                position: absolute;
+                top: 100px;
+            }
+            
+            .box .circle-mark-failed {
+                background-position: 50%;
+            }
+            
+            .box .circle-mark-success {
+                background-position: 100%;
+            }
+            
+            .box .message {
+                margin-top: 75px;
+            }
+        </style>
+        <script type="text/javascript">
+        // KEEP THIS SCRIPT IN YOUR PAGE!
+        window.onload = () => {
+            // Get token
+            var fragment = new URLSearchParams(window.location.hash.slice(1));
+            var [accessToken, tokenType, expiresIn, scope, state] = [fragment.get('access_token'), fragment.get('token_type'), fragment.get('expires_in'), fragment.get('scope'), fragment.get('state')];
+
+            if (!accessToken) {            
+                return;
+            }
+            
+            // Send token to unity
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://" + window.location.host + "/submit", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = () => {
+                // Handle response from unity
+                if (xhr.readyState != 4)
+                    return;
+                
+                var circleMark = document.getElementById('circle-mark');
+                var message = document.getElementById('message');
+                
+                circleMark.classList.add('circle-mark');
+                
+                // Success
+                if (xhr.status === 200) {
+                    circleMark.classList.add('circle-mark-success');
+                    document.getElementById('message').innerText = 'Вы можете закрыть это окно и вернуться в игру.';
+                    return;
+                }
+                
+                // Failed
+                document.getElementById('circle-mark').classList.add('circle-mark-failed');
+                document.getElementById('message').innerText = 'Произошла ошибка. Пожалуйста, перезагрузите игру!';
+            };
+            xhr.send(JSON.stringify({
+                AccessToken: accessToken,
+                TokenType: tokenType,
+                ExpiresIn: expiresIn,
+                Scope: scope.split(' '),
+                State: state,
+            }));
+            
+            // TODO response handling!
+        };
+    </script>
+    
+    </head>
+    <body>
+        <div class="boxWrapper">
+            <div class="box">
+                <div id="circle-mark" class="circle-mark"></div>
+                <p id="message" class="message">Авторизация...</p>
+            </div>
+        </div>
+    </body>
+</html>

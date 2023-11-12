@@ -1,0 +1,18 @@
+{
+    "name": "org.Shadow-Grove.LoginOverDiscordOAuth.Editor",
+    "rootNamespace": "ShadowGroveGames.LoginWithDiscord.Editor",
+    "references": [
+        "GUID:9f824de62267a5a49b2f2344d20fafa4"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -220,6 +220,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &115886348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115886349}
+  - component: {fileID: 115886350}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &115886349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115886348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3161329, y: 0.9364216, z: -4.9380264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &115886350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115886348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095b1f2ca3025f14ba3bf4f0e9bb77ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229691802
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +427,139 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &602674720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6239453567777781909, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_Name
+      value: Login with Discord Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _applicationId
+      value: 805333709413679114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 640025564}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLoginSuccess
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AuthInDiscord, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781910, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: _onLoginWithDiscordSuccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239453567777781911, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0cec15bb5c5d2f4cba0b027c2c752b3, type: 3}
+--- !u!1 &640025563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640025565}
+  - component: {fileID: 640025564}
+  m_Layer: 0
+  m_Name: AuthInDiscord
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &640025564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640025563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55322bae2af76543a69d710eb49090c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &640025565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640025563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3161329, y: 0.9364216, z: -4.9380264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866118783
 GameObject:
@@ -640,7 +817,7 @@ GameObject:
   - component: {fileID: 1177800771}
   m_Layer: 0
   m_Name: Network Manager
-  m_TagString: Untagged
+  m_TagString: NetworkManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177800770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1777794829, guid: 0ae8d181602a00248a82f64a684a1c88, type: 3}
   m_Name: 
@@ -676,7 +853,7 @@ MonoBehaviour:
     Users: 
   _maxPlayers: 10
   AvatarSpawning: 1
-  AvatarPrefab: {fileID: 756407033165787694, guid: 9de0acb585916e646a51667fb11cdd45, type: 3}
+  AvatarPrefab: {fileID: 5925211506002527779, guid: 9de0acb585916e646a51667fb11cdd45, type: 3}
   AvatarSpawnLocation: {fileID: 1451774334}
   SpawnAvatarPerIndex: 0
   AvatarSpawnLocations: []
